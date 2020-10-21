@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Curiosity</title>
 </head>
 
 <body>
     <!-- HEADER -->
     <header class="header">
-        <a class="logo" href="text.html"><img src="images/main_logo.png" alt="curiosity"></a>
+        <a class="logo" href="/"><img src="images/main_logo.png" alt="curiosity"></a>
 
         <nav>
             <ul>
-                <li><a href="text.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#c_sec">Courses</a></li>
                 <li><a href="#fe_sec">FeedBack</a></li>
                 <li><a href="#fo_sec">Contact Us</a></li>
@@ -45,14 +45,14 @@
         <h1>Popular Courses</h1>
         <div class="courses_container">
             <div class="c_card c_card1">
-                <img class="c_image" src="images/physics.jpg" alt="">
+                <img class="c_image" src="/images/course_img/physics.jpg" alt="">
                 <h3>Learn Physics</h3>
                 <p>Welcome to the Physics library! Physics the study of matter, motion, energy, and force.</p>
                 <a href="">Enroll</a>
             </div>
             
                 <div class="c_card c_card2">
-                    <img class="c_image" src="images/physics.jpg" alt="">
+                    <img class="c_image" src="/images/course_img/physics.jpg" alt="">
                     <h3>Learn Physics</h3>
                     <p>Welcome to the Physics library! Physics the study of matter, motion, energy, and force.</p>
                     <a href="">Enroll</a>
@@ -60,7 +60,7 @@
             
             
                 <div class="c_card c_card3">
-                    <img class="c_image" src="images/physics.jpg" alt="">
+                    <img class="c_image" src="/images/course_img/physics.jpg" alt="">
                     <h3>Learn Physics</h3>
                     <p>Welcome to the Physics library! Physics the study of matter, motion, energy, and force.</p>
                     <a href="">Enroll</a>
@@ -150,7 +150,7 @@
     </div>
     <!-- MODAL -->
     <!-- ***********************SCRIPTS*********************-->
-    <script src="app.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
