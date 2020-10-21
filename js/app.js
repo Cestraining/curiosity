@@ -1,5 +1,12 @@
 //modal
 const modalwa =document.getElementById('modal');
+const close=document.getElementById('close');
+const form_m=document.getElementById('form_m');
+
+close.addEventListener('click',function(){
+    modalwa.style.display="none";
+    form_m.style.display="none"
+})
 
 //open modal
 const getstart= document.getElementById('getstarted');
@@ -17,12 +24,12 @@ const form2=document.getElementById('form2');
 const form1=document.getElementById('form1');
 
 // login
-let loga=["none","block","red",""];
+let loga=["none","block","royalblue",""];
 signin.addEventListener("click" , function(){ openwa(loga); });
 btnlog.addEventListener('click',function(){ openwa(loga); });
 
 //signup
-let regisa=["block","none","","red"];
+let regisa=["block","none","","royalblue"];
 getstart.addEventListener('click', function(){ openwa(regisa); });
 btnregis.addEventListener('click',function(){ openwa(regisa); });
 
@@ -33,6 +40,7 @@ window.onclick=function(event){
         lc.backgroundColor="";
         rc.backgroundColor="";
         modalwa.style.display="none";
+        form_m.style.display="none"
         
     }
 };
