@@ -85,7 +85,19 @@
  {
      color: white;
      background-color: blue;
+
  }
+ #pic img
+ {
+     display: block;
+     width: 45px;
+     height: 45px;
+     margin-right: 5px;
+     background-color: white;
+     border: 3px solid rgb(13, 24, 129);
+     border-radius: 50%;
+ }
+
   /* Header End */
   /* Hero Section Start */
  .hero 

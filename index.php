@@ -1,4 +1,13 @@
-<?php session_start() ?>
+<?php session_start();
+
+  if(isset($_SESSION['islogin']))
+    {
+    include_once('dbconnection.php'); 
+    $id=$_SESSION['stu_id'];
+    $result=$conn->query("SELECT stu_img FROM student WHERE stu_id=$id");
+    $row=$result->fetch_assoc();
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +34,21 @@
         </nav>
 
         <div class="account">
+            <?php 
+            if(isset($_SESSION['islogin']))
+            {
+            ?>
+             <a id="pic" href="student/studentProfile.php"><img src="<?php echo $row['stu_img']?>" alt=""></a>
+             <?php
+            }
+            else
+            {
+            ?>
             <a id="signin" href="#">SIGN IN</a>
-            <a id="pic" href="#"><img src="" alt=""></a>
+            <?php
+            }
+            ?>
+            
         </div>
     </header>
     <!-- HEADER -->
@@ -38,7 +60,21 @@
             <p>Learn <span style="color:red">Physics</span>, <span style="color:red">Computer Science</span> and
                 other <span style="color:red">Enginnering</span> Subjects
             </p>
-            <a id="getstarted" href="#">Get Started</a>
+            <?php
+             if(isset($_SESSION['islogin']))
+            {
+            ?>
+                <a href="student/studentProfile.php">My Profile</a>
+            <?php
+            }
+            else
+            {
+            ?>
+                <a id="getstarted" href="#">Get Started</a>
+            <?php
+            }
+            ?>
+            
         </div>
     </section>
     <!-- HERO -->

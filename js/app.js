@@ -25,12 +25,14 @@ const form1=document.getElementById('form1');
 
 // login
 let loga=["none","block","royalblue",""];
-signin.addEventListener("click" , function(){ openwa(loga); });
+if(signin != null){
+signin.addEventListener("click" , function(){ openwa(loga); });}
 btnlog.addEventListener('click',function(){ openwa(loga); });
 
 //signup
 let regisa=["block","none","","royalblue"];
-getstart.addEventListener('click', function(){ openwa(regisa); });
+if(getstart !=null){
+getstart.addEventListener('click', function(){ openwa(regisa); });}
 btnregis.addEventListener('click',function(){ openwa(regisa); });
 
 

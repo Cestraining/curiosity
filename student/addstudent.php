@@ -1,6 +1,7 @@
 <?php 
+    session_start();
     include_once('../dbconnection.php'); 
-
+    
 
         if (isset($_POST['x']))
         {
@@ -42,14 +43,17 @@
 
             $sql= "SELECT stu_id from student where stu_email='$stuemailC' AND stu_pass='$stupassC'";
 
+            $result=$conn->query($sql);
 
-            $resutl=$conn->query($sql);
+             if($result->num_rows > 0)
+            {    
 
-             if($resutl->num_rows > 0)
-            {       
+                $row=$result->fetch_assoc();
+                $_SESSION["islogin"]=true;
+                $_SESSION["stu_id"]=$row['stu_id'];
                 $mess = array(
                     0 => "login successful",
-                    1 => "successs",
+                    1 => "success",
                 );
                 $jsonwa= json_encode($mess);
                 echo $jsonwa;

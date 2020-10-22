@@ -53,7 +53,8 @@ function logStu()
           
             if(mC[1]=="success")
             {
-                logUser(stuemailC,stupassC);
+                console.log("yes iam");
+                window.location.replace("index.php");
             }
             else
             {
@@ -85,10 +86,5 @@ function form_mess(mess,status)
         form_m.style.color="black";
         form_m.style.backgroundColor="red";
     }
-    
-}
-
-function logUser(email,pass)
-{
     
 }
