@@ -1,5 +1,7 @@
 //modal
 const modalwa =document.getElementById('modal');
+const amodalwa =document.getElementById('amodal');
+
 const close=document.getElementById('close');
 const form_m=document.getElementById('form_m');
 
@@ -8,9 +10,23 @@ close.addEventListener('click',function(){
     form_m.style.display="none"
 })
 
+const aclose=document.getElementById('aclose');
+const aform_m=document.getElementById('aform_m');
+
+aclose.addEventListener('click',function(){
+    amodalwa.style.display="none";
+    aform_m.style.display="none"
+})
+
+
 //open modal
 const getstart= document.getElementById('getstarted');
 const signin= document.getElementById('signin');
+//open ad modal
+const adlogin=document.getElementById('adm_log');
+adlogin.addEventListener('click',function(){
+    amodalwa.style.display="block";
+});
 
 //modal two buttons
 const btnregis=document.getElementById('btnregis');
@@ -38,6 +54,9 @@ btnregis.addEventListener('click',function(){ openwa(regisa); });
 
 //close modal style1
 window.onclick=function(event){
+    if(event.target==amodalwa){
+        amodalwa.style.display="none";
+    }
     if(event.target== modalwa){
         lc.backgroundColor="";
         rc.backgroundColor="";

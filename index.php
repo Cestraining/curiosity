@@ -105,12 +105,12 @@
                 </div>
             
         </div>
-        <a id="viewallC" href="#">View All Courses</a>
+        <a id="viewallC" href="./courses.php">View All Courses</a>
     </section>
     <!-- COURSES -->
     <!-- FeedBack -->
     <section class="feedback" id="fe_sec">
-        
+  
     </section>
     <!-- FeedBack -->
      <!-- Footer -->
@@ -147,12 +147,14 @@
         </div>
 
         <div class="copyright">
-            <p>Copyright <span>&copy;</span> 2020 | Designed by E-curiosity || <a href="#">Admin login</a></p>
+            <p>Copyright <span>&copy;</span> 2020 | Designed by E-curiosity || <a id="adm_log" href="#">Admin login</a></p>
         </div>
     </footer>
     <!-- Footer -->
     <!-- Modal -->
     <?php require 'modal.php'; ?>
+    <?php require 'ad_modal.php'; ?>
+    
     <!-- Modal -->
     <!-- ***********************SCRIPTS*********************-->
     <script src="/js/app.js"></script>

@@ -30,7 +30,7 @@
 
 ?>
 <section>
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data" autocomplete="off">
     <label>Student ID</label><br>
     <input type="text" value="<?php echo $row['stu_id'] ?>" disabled><br>
     <label>Email</label><br>

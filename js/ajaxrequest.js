@@ -53,7 +53,6 @@ function logStu()
           
             if(mC[1]=="success")
             {
-                console.log("yes iam");
                 window.location.replace("index.php");
             }
             else
@@ -70,6 +69,11 @@ function logStu()
 
 
 
+}
+
+function logad()
+{
+    
 }
 
 function form_mess(mess,status)

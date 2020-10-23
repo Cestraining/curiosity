@@ -301,7 +301,7 @@
  
   /* Modal Start */
 
-#modal
+.modal
 {
     position: fixed;
     display:none;
@@ -311,7 +311,7 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.582);
 }
-#modal_content
+.modal_content
 {
     position: relative;
     width: 40%;
@@ -333,7 +333,7 @@
     border-radius: 5px;
 
 }
-#modal_content #close
+.modal_content .close
 {
     position: absolute;
     top: -15px;
@@ -373,7 +373,7 @@
     color: black;    
     background-color:white;
 }
-#form_m
+.form_m
 {
     display: none;
     text-align: center;
