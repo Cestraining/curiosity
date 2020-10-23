@@ -6,7 +6,7 @@
   }
   else
   {
-    header('location: index.php');
+    header('location: /index.php');
   }
 ?> 
 
@@ -28,9 +28,6 @@
       break;
       case 'stuChangePass.php':
         echo "Change Password";
-      break;
-      case 'stu_logout.php':
-        echo "Logout";
       break;
       case 'studentProfile.php':
         echo "Profile";

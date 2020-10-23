@@ -9,6 +9,8 @@
  body
  {
      font-family: sans-serif;
+     overflow-x: hidden;
+
  }
  a, a:visited, a:hover {
      text-decoration: none;
@@ -54,9 +56,9 @@
       left: 0;
       height: 100%;
       background-color: rgba(128, 128, 128, 0.192);
-      overflow-x: hidden;
       width: 25%;
       z-index: 2;
+      overflow-y: auto;
 
   }
   aside img
@@ -78,8 +80,20 @@
       padding-left: 10px;
       color: black;
   }
-
+  aside a:last-child
+  {
+      background-color: red;
+      font-weight: bold;
+      color: white;
+      margin-top: 30px;
+  }
   /* Header End */
-
+  section
+  {
+       width: 70%;
+       margin: 20px;
+       margin-left: 27%;
+       background-color: lightblue;
+  }
 
 

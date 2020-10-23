@@ -9,7 +9,7 @@
       <a id="Courses" href="myCourses.php">My Courses</a>
       <a id="FeedBack" href="stufeedBack.php">FeedBack</a>
       <a id="Change Password" href="stuChangePass.php">Change Password</a>
-      <a id="Logout" href="stu_logout.php">Logout</a>
+      <a href="stu_logout.php">Logout</a>
     </aside>
     <script>
       document.getElementById(document.title).style.backgroundColor="blue";
