@@ -56,6 +56,8 @@ btnregis.addEventListener('click',function(){ openwa(regisa); });
 window.onclick=function(event){
     if(event.target==amodalwa){
         amodalwa.style.display="none";
+        aform_m.style.display="none"
+
     }
     if(event.target== modalwa){
         lc.backgroundColor="";

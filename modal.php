@@ -30,7 +30,7 @@
                 </form>
                 <button onclick="logStu()">Login</button>
                 </div>
-                <span id="form_m"></span>
+                <span id="form_m" class="form_m"></span>
             </div>
         </div>
     </div>
