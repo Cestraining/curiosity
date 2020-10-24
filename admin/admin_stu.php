@@ -188,6 +188,6 @@ if(!isset($_GET['edit']) && !isset($_GET['action']))
 }
 ?>
 
-<!-- SECTION START------------------------------------------>
+<!-- SECTION END------------------------------------------>
 </section>
 <?php require 'adminaside.php'; ?>
