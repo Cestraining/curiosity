@@ -147,7 +147,21 @@
         </div>
 
         <div class="copyright">
-            <p>Copyright <span>&copy;</span> 2020 | Designed by E-curiosity || <a id="adm_log" href="#">Admin login</a></p>
+            <p>Copyright <span>&copy;</span> 2020 | Designed by E-curiosity || <?php 
+            if(isset($_SESSION['isadminlogin']))
+            {
+                ?>
+                <a href="/admin/admin_dashboard.php">Admin Panel</a>
+                <?php
+            }
+            else
+            {   
+                ?>
+                <a id="adm_log" href="#">Admin login</a>
+                <?php
+            }
+                ?>
+            </p>
         </div>
     </footer>
     <!-- Footer -->

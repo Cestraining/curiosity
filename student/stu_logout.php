@@ -1,6 +1,6 @@
 <?php
 session_start();
-session_unset();
-session_destroy();
+unset($_SESSION['islogin']);
+unset($_SESSION['stu_id']);
 header('location: /index.php');
 ?>

@@ -24,9 +24,11 @@ const getstart= document.getElementById('getstarted');
 const signin= document.getElementById('signin');
 //open ad modal
 const adlogin=document.getElementById('adm_log');
+if(adlogin != null){
 adlogin.addEventListener('click',function(){
     amodalwa.style.display="block";
 });
+}
 
 //modal two buttons
 const btnregis=document.getElementById('btnregis');
