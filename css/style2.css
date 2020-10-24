@@ -137,20 +137,36 @@
         padding: 10px 10px;
     }
     .ac
-    {   
+    {
         padding: 0;
-        margin: 0;
-        background-color: aliceblue;
-        text-align: center;
+        position: relative;
     }
     .ac a
     {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
-    
+    .ac a:hover
+    {
+        background-color: lightcyan;
+    }
+    .ac img
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .add 
+    {
+        display: inline-block;
+     }
+     .add:hover
+     {
+        background-color: lightgoldenrodyellow;
 
-
+    }
 
