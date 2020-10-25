@@ -137,8 +137,19 @@ if(isset($_GET['delete']))
     
     $stu_id=$_GET['delete'];
     $sql="DELETE FROM student WHERE stu_id=$stu_id";
-    if($conn->query($sql)==true)
+    $result=$conn->query("SELECT stu_img FROM student WHERE stu_id=$stu_id");
+    $row=$result->fetch_assoc();
+    if($conn->query($sql))
     {
+        if($row['stu_img']!="/images/stu_images/default.svg" && $row['stu_img'] != "")
+        {
+            unlink($row['stu_img']);
+        }
+       
+        if(isset($_SESSION['islogin']))
+        {
+            unset($_SESSION['islogin']);
+        }
         $mess="deleted successfully !!";
     }
     else
@@ -188,6 +199,6 @@ if(!isset($_GET['edit']) && !isset($_GET['action']))
 }
 ?>
 
-<!-- SECTION START------------------------------------------>
+<!-- SECTION END------------------------------------------>
 </section>
 <?php require 'adminaside.php'; ?>
