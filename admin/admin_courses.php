@@ -40,16 +40,22 @@ if(isset($_GET['action']) || isset($_POST['action']))
 
     <h1>Add New Course</h1>
     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data" >
+
     <label for="name">Course Name</label><br>
     <input type="text" name="name" id="name"><br>
+
     <label for="desc">Course Description</label><br>
-    <input type="text" name="desc" id="desc"><br>
+    <textarea name="desc" id="desc" cols="40" rows="5"></textarea><br>
+
     <label for="auth">Author</label><br>
     <input type="text" name="auth" id="auth"><br>
+
     <label for="dur">Course Duration</label><br>
     <input type="text" name="dur" id="dur"><br>
+
     <label for="up_img">Course Image</label><br>
     <input type="file" name="fileToUpload" id="up_img"><br>
+
     <input type="submit" name="action" value="Submit"><br>
     <a href="admin_courses.php">Close</a>
 </form>
@@ -96,7 +102,7 @@ if(isset($_GET['edit']) || isset($_POST['edit']) )
                     }
                     else
                     {
-                        $mess="can't update student details right now :( ";
+                        $mess="can't update courses details right now :( ";
                     }
 
                 }
@@ -145,7 +151,7 @@ if(isset($_GET['edit']) || isset($_POST['edit']) )
     <input type="text" value="<?php echo $row['c_name'] ?>" name="name" id="name"><br>
 
     <label for="desc">Course Description</label><br>
-    <input type="text" value="<?php echo $row['c_desc'] ?>" name="desc" id="desc"><br>
+    <textarea name="desc" id="desc" cols="40" rows="5"><?php echo $row['c_desc'] ?></textarea><br>
 
     <label for="auth">Author</label><br>
     <input type="text" value="<?php echo $row['c_author'] ?>" name="auth" id="auth"><br>

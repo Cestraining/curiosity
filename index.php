@@ -1,8 +1,8 @@
 <?php session_start();
+include_once('dbconnection.php');
      
   if(isset($_SESSION['islogin']))
     {
-    include_once('dbconnection.php'); 
     $id=$_SESSION['stu_id'];
     $result=$conn->query("SELECT stu_img FROM student WHERE stu_id=$id");
     $row=$result->fetch_assoc();
@@ -82,28 +82,21 @@
     <section class="courses" id="c_sec">
         <h1>Popular Courses</h1>
         <div class="courses_container">
-            <div class="c_card c_card1">
-                <img class="c_image" src="/images/course_img/physics.jpg" alt="">
-                <h3>Learn Physics</h3>
-                <p>Welcome to the Physics library! Physics the study of matter, motion, energy, and force.</p>
-                <a href="">Enroll</a>
-            </div>
-            
-                <div class="c_card c_card2">
-                    <img class="c_image" src="/images/course_img/physics.jpg" alt="">
-                    <h3>Learn Physics</h3>
-                    <p>Welcome to the Physics library! Physics the study of matter, motion, energy, and force.</p>
-                    <a href="">Enroll</a>
+            <?php  
+                $resu=$conn->query("SELECT c_id,c_name,c_desc,c_img FROM course ORDER BY n_enroll LIMIT 3");  
+                
+                while($r=$resu->fetch_assoc())
+                {?> 
+                <div class="c_card">
+                <img class="c_image" 
+                src="<?php echo str_replace("..","",$r['c_img']); ?>" alt="">
+                <h3><?php  echo $r['c_name'];  ?></h3>
+                <p><?php  echo $r['c_desc'];  ?></p>
+                <a href="coursedetails.php?course_id=<?php echo $r['c_id'] ?>">Enroll</a>
                 </div>
-            
-            
-                <div class="c_card c_card3">
-                    <img class="c_image" src="/images/course_img/physics.jpg" alt="">
-                    <h3>Learn Physics</h3>
-                    <p>Welcome to the Physics library! Physics the study of matter, motion, energy, and force.</p>
-                    <a href="">Enroll</a>
-                </div>
-            
+                <?php
+                }
+                ?>
         </div>
         <a id="viewallC" href="./courses.php">View All Courses</a>
     </section>
