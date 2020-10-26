@@ -23,6 +23,9 @@
       case 'admin_dashboard.php':
         echo "Dashboard";
       break;
+      case 'myCourses.php':
+        echo "Courses";
+      break;
       case 'stufeedBack.php':
         echo "FeedBack";
       break;

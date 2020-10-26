@@ -161,7 +161,7 @@ if(isset($_GET['edit']) || isset($_POST['edit']) )
 
     <input type="hidden" name="p_img" value="<?php echo $row['c_img'] ?>">
 
-    <img src="<?php echo $row['c_img'] ?>" alt=""><br>
+    <img style="width:400px;height:auto;" src="<?php echo $row['c_img'] ?>" alt=""><br>
 
     <label for="c_img">Course Image</label><br>
     <input type="file" name="fileToUpload" id="c_img"><br>

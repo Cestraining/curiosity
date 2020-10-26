@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,23 +24,28 @@
 
                 if($result->num_rows == 1)
                 {
-                    $mess='you already take this course on'.$result->fetch_assoc['e_date'];
+                    $mess='you already have take this course on '.$result->fetch_assoc()['e_date'];
                 }
                 else
                 {
                     
-                }
+                    $sql1="UPDATE course SET n_enroll=n_enroll+1 WHERE c_id='$cid'";
+                    $sql2="INSERT INTO course_enroll(c_id,s_email) VALUES('$cid','$se')";
 
+                    if($conn->query($sql1) && $conn->query($sql2))
+                    {
+                        $mess="Course added successfully to your account !!";
+                    }
+                    else
+                    {
+                        $mess="Sorry,You Can't take this course right now";
+                    }
+                }
             }
             else
             {
                 $mess="you need to login first !";
             }
-
-
-
-
-
         }
 
 
@@ -64,12 +70,28 @@
                 </div>
             </div>
         </div>
-        <span><?php if(isset($mess)){ echo $mess; } ?></span>
+        <span><?php if(isset($mess)){ echo $mess; } 
+            $sql="SELECT l_id,l_name FROM lesson WHERE lc_id='$id'";
+            $result=$conn->query($sql);
+        
+        ?></span>
         <div id="lesson">
             <table>
+            <tr>
                 <th>Lesson ID</th>
                 <th>Lesoon Name</th>
-                
+            </tr>
+            <?php while($row=$result->fetch_assoc())
+            {
+            ?>
+                <tr>
+                <th><?php echo $row['l_id']; ?></th>
+                <td><?php echo $row['l_name']; ?></td>
+                </tr>
+
+            <?php
+            }
+            ?>
             </table>
         </div>
     </section>

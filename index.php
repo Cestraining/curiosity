@@ -83,7 +83,7 @@ include_once('dbconnection.php');
         <h1>Popular Courses</h1>
         <div class="courses_container">
             <?php  
-                $resu=$conn->query("SELECT c_id,c_name,c_desc,c_img FROM course ORDER BY n_enroll LIMIT 3");  
+                $resu=$conn->query("SELECT c_id,c_name,c_desc,c_img FROM course ORDER BY n_enroll DESC LIMIT 3");  
                 
                 while($r=$resu->fetch_assoc())
                 {?> 
