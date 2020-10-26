@@ -68,7 +68,7 @@ if(isset($_GET['checkid']))
         }
         ?>
         </table>
-        <span><?php if(isset($mess)){echo $mess;} ?></span>
+        <span><?php if(isset($mess)){echo $mess;} ?></span><br>
 
         <a href="<?php echo $_SERVER['PHP_SELF'].'?action='.$lc_id; ?>" class="add" ><img style="width:50px; height:50px" src="../images/plus-square.svg" alt=""></a>
 

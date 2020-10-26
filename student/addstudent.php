@@ -51,6 +51,7 @@
                 $row=$result->fetch_assoc();
                 $_SESSION["islogin"]=true;
                 $_SESSION["stu_id"]=$row['stu_id'];
+                $_SESSION["stu_email"]=$stuemailC;
                 $mess = array(
                     0 => "login successful",
                     1 => "success",

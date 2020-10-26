@@ -4,17 +4,17 @@
     <div class="card card1">
         <p>Courses</p><br>
         <h3>8</h3><br>
-        <p>View</p>
+        <a href="admin_courses.php">View</a>
     </div>
     <div class="card card2">
-        <p>Courses</p><br>
+        <p>Students</p><br>
         <h3>8</h3><br>
-        <p>View</p>
+        <a href="admin_stu.php">View</a>
     </div>
     <div class="card card3">
-        <p>Courses</p><br>
+        <p>Order</p><br>
         <h3>8</h3><br>
-        <p>View</p>
+        <a href="enroll_report.php">View</a>
     </div>
 </div>
 <p class="t_title">Course Enrolled</p>

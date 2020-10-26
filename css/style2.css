@@ -26,33 +26,30 @@
 
   header
   {
-      width: 100vw;
-      height: 5vh;
-      display: flex;
-      justify-content: start;
       background-color: cyan;
-      padding: 4px;
+      width: 100vw;
   }
   header a
   {
-      width: auto;
-      height: 100%;
-      overflow: hidden;
+      display: block;
+      /* when change here then also in aside top */
+      width: 25%;
+      padding: 2px;
   }
   header img
   {
-      width: auto;
-      height: 100%;
+      width: 100%;
+      height: auto;
       display: block;
       border-radius: 10px;
-      border: 2px solid black;
+      border: 1px solid black;
   }
   /* Header End */
   /* Aside Start */
   aside
   {     
       position: fixed;
-      top: 5vh;
+      top: calc(0.26*(25/100*100vw));
       left: 0;
       height: 100%;
       background-color: rgba(128, 128, 128, 0.192);
@@ -121,6 +118,7 @@
     {
         text-align: start;
         border-top: 1px solid grey;
+        border-right: 1px solid grey;
         border-collapse: collapse;
         margin: 10px;
     }
