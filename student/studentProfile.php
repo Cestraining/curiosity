@@ -5,6 +5,7 @@
     {   
         $status=1;
         $stu_name=$_POST['stu_name'];
+        $p_img=$_POST['p_img'];
         $stu_occ=$_POST['stu_occ'];
         $target_dir="../images/stu_images/";
         $target_file=$target_dir . basename($_FILES['fileToUpload']['name']);
@@ -12,6 +13,10 @@
         if(move_uploaded_file($_FILES['fileToUpload']['tmp_name'],$target_file))
         {
             $status++;
+            if($p_img!="/images/stu_images/default.svg")
+            {
+                unlink($p_img);
+            }
             $conn->query("UPDATE student SET stu_img='$target_file' WHERE stu_id=$id");
         } 
         $sql="UPDATE student SET stu_name='$stu_name',
@@ -23,7 +28,7 @@
         }
         
     }
-    $sql="SELECT stu_id,stu_email,stu_name,stu_occ FROM student
+    $sql="SELECT stu_id,stu_img,stu_email,stu_name,stu_occ FROM student
     WHERE stu_id=$id";
     $result=$conn->query($sql);
     $row=$result->fetch_assoc();
@@ -39,6 +44,10 @@
     <input type="text" name="stu_name" id="stu_name" value="<?php echo $row['stu_name'] ?>"><br>
     <label for="stu_occ">Occupation</label><br>
     <input type="text" name="stu_occ" id="stu_occ" value="<?php echo $row['stu_occ'] ?>"><br>
+
+    <input type="hidden" name="p_img" value="<?php echo $row['stu_img'] ?>">
+
+
     <label for="up_img">Upload Image</label><br>
     <input type="file" name="fileToUpload" id="up_img"><br>
     <input type="submit" value="Update" name="submit"><br>

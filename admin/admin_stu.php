@@ -141,7 +141,7 @@ if(isset($_GET['delete']))
     $row=$result->fetch_assoc();
     if($conn->query($sql))
     {
-        if($row['stu_img']!="/images/stu_images/default.svg" && $row['stu_img'] != "")
+        if($row['stu_img']!="/images/stu_images/default.svg")
         {
             unlink($row['stu_img']);
         }

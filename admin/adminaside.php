@@ -1,4 +1,4 @@
-<aside>
+<aside class="noprint">
 <h2 style="margin:5px;color:blue;">Admin Panel</h2><hr><br>
 
       <a id="Dashboard" href="admin_dashboard.php">Dashboard</a>

@@ -47,7 +47,7 @@
   ?></title>
 </head>
 <body>
-    <header>
+    <header class="noprint">
       <a href="/"><img src="../images/main_logo.png" alt=""></a>
       
     </header>

@@ -220,3 +220,20 @@
         background-color: black;
     }
     /* FOR STUDENT MY COURSES */
+    /* PRINT THE PAGE !! */
+   @media print{
+       .noprint{
+           display: none;
+       }
+   }
+   #printbtn
+   {
+       color: white;
+       background-color: black;
+       cursor: pointer;
+       font-weight: bold;
+       margin: 0 0 5px 5px;
+       font-size: 1.2em;
+       padding: 4px 7px;
+   }
+   /* PRINT THE PAGE !! */

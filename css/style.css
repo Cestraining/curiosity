@@ -228,6 +228,11 @@
      background-color: teal;
      height: auto;
      padding: 10px 0px;
+ }
+ .feedback h1
+ {
+     text-align: center;
+     color: honeydew;
  } 
 #fmove
  {
@@ -241,13 +246,51 @@
  {
      padding: 10px 20px;
      flex: 0 0 50%;
-}
+ }
  .feedback img
  {
      width: 60px;
      height: 60px;
-     border: 1px solid green;
+     border: 1px solid tomato;
      border-radius: 50%;
+ }
+ .fcard .content
+ {
+     padding: 3px 7px;
+     border-radius: 5px;
+     color: white;
+     margin-bottom: 5px;
+    border: 1px solid white;
+    border-left: 7px solid rgba(115, 251, 25, 0.91);
+ }
+ .fcard .fname
+ {
+     text-transform: capitalize;
+     font-size: 1.1em;
+     color: rgba(115, 251, 25, 0.91);
+     font-weight: bold;
+ }
+ .fcard .focc
+ {
+     text-transform: capitalize;
+     color: white;
+     margin-top: 3px;
+     font-weight: 400;
+ }
+ 
+ .fsb 
+ {
+     text-align: center;
+ }
+ .fsb button
+ {
+     border: none;
+     padding: 2px 10px;
+     font-weight: bold;
+     font-size: 1.4em;
+     color: indigo;
+     cursor: pointer;
+     
  }
 
 

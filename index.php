@@ -112,22 +112,22 @@ include_once('dbconnection.php');
                 {
                 ?>
                     <div class="fcard">
-                    <p><?php echo $row['content'] ?></p>
+                    <p class="content"><?php echo $row['content'] ?></p>
                     <?php
                         $sid=$row['s_id'];
                         $re=$conn->query("SELECT stu_img,stu_name,stu_occ FROM student WHERE stu_id='$sid'");
-                        $r=$result->fetch_assoc();
+                        $r=$re->fetch_assoc();
                     ?>
                     <img src="<?php echo $r['stu_img']; ?>" alt="">
-                    <p><?php echo $r['stu_name'] ?></p>
-                    <p><?php echo $r['stu_occ'] ?></p>
+                    <p class="fname"><?php echo $r['stu_name'] ?></p>
+                    <p class="focc"><?php echo $r['stu_occ'] ?></p>
                     </div>
                 <?php    
                 }
                 ?>
                     
         </div>           
-        <div>
+        <div class=fsb>
         <button id="lf">&lt;</button>
         <button id="rt">&gt;</button>
         </div>

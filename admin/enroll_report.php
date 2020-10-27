@@ -1,6 +1,6 @@
 <?php require 'adminheader.php'; ?>
 <section>
-    <form action="<?php echo $_SERVER['PHP_SELF'] ?>">
+    <form class="noprint" action="<?php echo $_SERVER['PHP_SELF'] ?>">
         <input type="date" name="from">To
         <input type="date" name="to">
         <input type="submit" name="c_enroll" value="Search">
@@ -41,6 +41,7 @@
         }
         ?>
         </table>
+        <button id="printbtn" onClick="window.print()">PRINT</button>
     <?php
     }
     
