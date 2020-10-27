@@ -21,6 +21,12 @@
             text-align:center;
             padding: 10px 0px;
         }
+        p
+        {
+          cursor: pointer;
+          padding: 3px 4px;
+          margin-bottom: 7px;
+        }
     </style>
     <title>Document</title>
 </head>
@@ -45,14 +51,11 @@
       
     </aside>
     <section>
-    <iframe width="100%" height="360px"
+    <iframe id="frame" width="100%" height="360px"
      src=""
       frameborder="0">
      </iframe> <br>
     </section>
-    <script>
-        var list=document.getElementsByClassName('list');
-        console.log(list);
-    </script>
+    <script src="../js/player.js"></script>
 </body>
 </html>
