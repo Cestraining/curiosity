@@ -80,3 +80,20 @@ function openwa(pa)
      lc.backgroundColor=pa[2];
      rc.backgroundColor=pa[3];
 }
+
+
+
+// Feedback section styling
+
+var lf=document.getElementById('lf');
+var rt=document.getElementById('rt');
+var fmove=document.getElementById('fmove');
+lf.addEventListener('click',function(){
+    
+    fmove.scrollLeft+=-300;
+});
+rt.addEventListener('click',function(){
+    fmove.scrollLeft+=300;
+});
+
+// Feedback section styling

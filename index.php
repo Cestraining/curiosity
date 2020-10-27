@@ -103,7 +103,35 @@ include_once('dbconnection.php');
     <!-- COURSES -->
     <!-- FeedBack -->
     <section class="feedback" id="fe_sec">
-  
+        <h1>Student's FeedBack</h1>
+        <div id="fmove">
+            <?php
+                $result=$conn->query("SELECT s_id,content FROM feedBack");
+
+                while($row=$result->fetch_assoc())
+                {
+                ?>
+                    <div class="fcard">
+                    <p><?php echo $row['content'] ?></p>
+                    <?php
+                        $sid=$row['s_id'];
+                        $re=$conn->query("SELECT stu_img,stu_name,stu_occ FROM student WHERE stu_id='$sid'");
+                        $r=$result->fetch_assoc();
+                    ?>
+                    <img src="<?php echo $r['stu_img']; ?>" alt="">
+                    <p><?php echo $r['stu_name'] ?></p>
+                    <p><?php echo $r['stu_occ'] ?></p>
+                    </div>
+                <?php    
+                }
+                ?>
+                    
+        </div>           
+        <div>
+        <button id="lf">&lt;</button>
+        <button id="rt">&gt;</button>
+        </div>
+
     </section>
     <!-- FeedBack -->
      <!-- Footer -->

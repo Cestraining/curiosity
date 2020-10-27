@@ -226,8 +226,52 @@
  {
      width: 100vw;
      background-color: teal;
-     height: 50vh;
+     height: auto;
+     padding: 10px 0px;
  } 
+#fmove
+ {
+     display: flex;
+     padding: 15px 0px;
+     overflow-x: auto;
+     scrollbar-width: none;
+     scroll-behavior: smooth;
+ }
+ .fcard
+ {
+     padding: 10px 20px;
+     flex: 0 0 50%;
+}
+ .feedback img
+ {
+     width: 60px;
+     height: 60px;
+     border: 1px solid green;
+     border-radius: 50%;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /* FeedBack Section End */
     /* Footer Section Start */
  .footer
