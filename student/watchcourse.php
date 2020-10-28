@@ -28,7 +28,7 @@
           margin-bottom: 7px;
         }
     </style>
-    <title>Document</title>
+    <title>Watch Courses</title>
 </head>
 <body>
  <header>

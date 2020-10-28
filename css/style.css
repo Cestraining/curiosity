@@ -198,6 +198,7 @@
      height: auto;
      border: 2px solid tomato;
      border-radius: 15px;
+     box-shadow: 2px 2px 10px rgb(255, 38, 0);
      overflow: hidden;
  }
  .c_card>h3,.c_card>p

@@ -41,7 +41,7 @@
         }
         ?>
         </table>
-        <button id="printbtn" onClick="window.print()">PRINT</button>
+        <button class="noprint" id="printbtn" onClick="window.print()">PRINT</button>
     <?php
     }
     

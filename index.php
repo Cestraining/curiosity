@@ -185,12 +185,18 @@ include_once('dbconnection.php');
             </p>
         </div>
     </footer>
+
     <!-- Footer -->
+
+
     <!-- Modal -->
+
     <?php require 'modal.php'; ?>
     <?php require 'ad_modal.php'; ?>
     
     <!-- Modal -->
+
+    
     <!-- ***********************SCRIPTS*********************-->
     <script src="/js/app.js"></script>
     <script src="/js/ajaxrequest.js"></script>
